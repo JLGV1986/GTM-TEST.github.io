@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buscador</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Buscador</h1>
+    <input type="text" id="searchInput" class="form-control" placeholder="Ingresa tu búsqueda">
+    <ul id="results" class="list-group mt-2"></ul>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var data = [
+        "Manzana",
+        "Banana",
+        "Naranja",
+        "Pera",
+        "Piña",
+        "Melón",
+        "Uva",
+        "Mango",
+        "Fresa",
+        "Sandía"
+      ];
+
+      var searchInput = document.getElementById('searchInput');
+      var results = document.getElementById('results');
+
+      searchInput.addEventListener('input', function() {
+        var searchValue = searchInput.value.toLowerCase();
+        var filteredData = data.filter(function(item) {
+          return item.toLowerCase().indexOf(searchValue) !== -1;
+        });
+
+        results.innerHTML = '';
+
+        filteredData.forEach(function(item) {
+          var li = document.createElement('li');
+          li.className = 'list-group-item';
+          li.appendChild(document.createTextNode(item));
+          results.appendChild(li);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
