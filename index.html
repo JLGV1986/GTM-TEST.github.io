@@ -19,14 +19,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script>
     function boton1Click() {
       alert("Has hecho clic en el botón 1");
+      limpiarResultado();
     }
 
     function boton2Click() {
       console.log("Has hecho clic en el botón 2");
+      limpiarResultado();  
     }
 
     function boton3Click() {
       document.getElementById("resultado").innerHTML = "Has hecho clic en el botón 3";
+    }
+    
+    function limpiarResultado() {
+        document.getElementById("resultado").innerHTML = "";
     }
   </script>
     
