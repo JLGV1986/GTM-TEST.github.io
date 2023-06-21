@@ -14,6 +14,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <title>GTM-TEST</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+<!-- Test Scripts -->
+ <h1 style="text-align: left;">&nbsp;Botones de prueba</h1><div><br /></div>
+  <script>
+    function boton1Click() {
+      alert("Has hecho clic en el botón 1");
+    }
+
+    function boton2Click() {
+      console.log("Has hecho clic en el botón 2");
+    }
+
+    function boton3Click() {
+      document.getElementById("resultado").innerHTML = "Has hecho clic en el botón 3";
+    }
+  </script>
+    
 </head>  
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -63,8 +79,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h1>
             HOME
         </h1>
-       
    </div>
+    <div class="container my-8">
+        <h1>Botones con funciones</h1>
+  
+  <button onclick="boton1Click()">Botón 1</button>
+  <button onclick="boton2Click()">Botón 2</button>
+  <button onclick="boton3Click()">Botón 3</button>
+  
+  <div id="resultado"></div>
+    </div>
+    
      <hr class="my-4">
     <footer>
         <div class="col-lg-8 px-0">
