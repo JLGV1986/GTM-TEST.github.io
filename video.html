@@ -66,7 +66,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   <div class="container my-10">
       <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    <div id="player"></div>
+ <!--   <div id="player"></div>
 
     <script>
       // 2. This code loads the IFrame Player API code asynchronously.
@@ -109,7 +109,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       function stopVideo() {
         player.stopVideo();
       }
-    </script>
+    </script> -->
+      // Coloca este código en el lugar adecuado de tu sitio web donde se incrusta el reproductor de YouTube
+<div id="youtube-player"></div> <!-- Asigna un ID único al reproductor de YouTube -->
+
+<script>
+  // Configura el reproductor de YouTube
+  var player = new YT.Player('youtube-player', {
+    videoId: 'M7lc1UVf-VE', // Reemplaza 'VIDEO_ID' con el ID de tu video de YouTube
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+
+  // Función que se ejecuta cuando el reproductor de YouTube está listo
+  function onPlayerReady(event) {
+    // Inicia el seguimiento del progreso del video en intervalos regulares
+    setInterval(function() {
+      var progress = event.target.getCurrentTime();
+      var interval = 10;
+      var roundedProgress = Math.floor(progress / interval) * interval;
+
+      // Envía los datos de ubicación del video a GTM
+      dataLayer.push({
+        'event': 'youtubeProgress',
+        'progress': roundedProgress
+      });
+    }, 10000); // Intervalo de tiempo en milisegundos (ejemplo: 10 segundos)
+  }
+
+  // Función que se ejecuta cuando el estado del reproductor de YouTube cambia
+  function onPlayerStateChange(event) {
+    // Aquí puedes agregar lógica adicional según sea necesario
+  }
+</script>
   <script>
    function() {
   // Obtiene el progreso actual del video de YouTube
