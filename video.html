@@ -99,11 +99,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var roundedProgress = Math.floor(progress / interval) * interval;
 
       // Envía los datos de ubicación del video a GTM
-      dataLayer.push({
-        'event': 'youtubeProgress',
-        'progress': roundedProgress
-      });
-    }, 10000); // Intervalo de tiempo en milisegundos (ejemplo: 10 segundos)
+    //  dataLayer.push({
+    //    'event': 'youtubeProgress',
+    //    'progress': roundedProgress
+   //   });
+   }, 10000); // Intervalo de tiempo en milisegundos (ejemplo: 10 segundos)
   }
 
   // Función que se ejecuta cuando el estado del reproductor de YouTube cambia
