@@ -9,7 +9,6 @@
   gtag('js', new Date());
 
   gtag('config', 'G-6HR0S15M39');
-</script>    
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -74,59 +73,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             VIDEO
         </h1>
     </div>
-  <div class="container my-10">
-      <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
- <!--   <div id="player"></div>
-
-    <script>
-      // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
-
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '360',
-          width: '640',
-          videoId: 'M7lc1UVf-VE',
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
-      }
-
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-        event.target.playVideo();
-      }
-
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-      var done = false;
-      function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 6000);
-          done = true;
-        }
-      }
-      function stopVideo() {
-        player.stopVideo();
-      }
-    </script> -->
-<!--  Coloca este código en el lugar adecuado de tu sitio web donde se incrusta el reproductor de YouTube -->
-<div id="youtube-player"> </div> <!-- Asigna un ID único al reproductor de YouTube -->
+  <div class="container my-10 --bs-border-style: solid;">
+    
+   <!-- // Coloca este código en el lugar adecuado de tu sitio web donde se incrusta el reproductor de YouTube -->
+<div id="youtube-player"></div> <!-- Asigna un ID único al reproductor de YouTube -->
 
 <script>
   // Configura el reproductor de YouTube
   var player = new YT.Player('youtube-player', {
-    videoId: 'zo9dJFo8H8g', // Reemplaza 'VIDEO_ID' con el ID de tu video de YouTube
+    videoId: 'E9GlFZJoMnA', // Reemplaza 'VIDEO_ID' con el ID de tu video de YouTube
     events: {
       'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange
@@ -154,19 +109,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // Aquí puedes agregar lógica adicional según sea necesario
   }
 </script>
-  <script>
-   function() {
-  // Obtiene el progreso actual del video de YouTube
-  var player = document.getElementById('zo9dJFo8H8g'); // Reemplaza 'youtube-player' con el ID de tu reproductor de YouTube
-  var currentTime = player.getCurrentTime();
-  
-  // Redondea el progreso al intervalo deseado (por ejemplo, cada 10 segundos)
-  var interval = 10;
-  var progress = Math.floor(currentTime / interval) * interval;
-
-  return progress;
-});
-</script> 
 </div>
      <hr class="my-4">
     <footer>
