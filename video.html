@@ -95,7 +95,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // Inicia el seguimiento del progreso del video en intervalos regulares
     setInterval(function() {
       var progress = event.target.getCurrentTime();
-      var interval = 10;
+      var interval = 15;
       var roundedProgress = Math.floor(progress / interval) * interval;
 
       // Envía los datos de ubicación del video a GTM
